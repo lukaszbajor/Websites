@@ -1,0 +1,66 @@
+.header {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    &__logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        font-family: 'Orbitron',
+            sans-serif;
+        font-size: 2.8rem;
+        transition: letter-spacing .3s;
+        cursor: default;
+    }
+
+    &__heading-box {
+        display: flex;
+    }
+
+    &__text-box {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.6em;
+    }
+
+    &__title {
+        font-size: 4.8rem;
+        margin-bottom: 0.3em;
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+
+    &__btn {
+        @include btnGray;
+
+        &:hover {
+
+            &::before {
+                left: 130%;
+            }
+
+        }
+
+        &::before {
+            @include glassEffect;
+        }
+
+    }
+
+    &__cursor {
+        opacity: 0;
+        transition: 0.2s;
+        font-size: 4.8rem;
+    }
+
+    &__cursor.active {
+        opacity: 1;
+    }
+}

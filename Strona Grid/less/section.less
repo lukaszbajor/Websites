@@ -1,0 +1,167 @@
+.main {
+    background-color: @secondcolor;
+    color: @maincolor;
+    grid-area: section;
+    min-height: 80vh;
+    padding-bottom: 50px;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    &__cytat {
+        margin-top: 20px;
+        margin-bottom: 25px;
+        padding: 5px;
+
+        &-title {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        padding: 5px;
+    }
+
+
+    &__features {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+
+        &-title {
+            font-size: 3rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        &-box {
+            max-width: 1000px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-self: center;
+            margin-top: 50px;
+            padding: 10px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__feature {
+        width: 90%;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            font-size: 5rem;
+            padding: 10px;
+            border-bottom: 3px solid @myyellow;
+            color: @navcolor;
+        }
+
+        p {
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media(min-width:447px) {
+    .main {
+        &__feature {
+            width: 45%;
+        }
+    }
+}
+
+
+@media(min-width:768px) {
+    .main {
+        &__box {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        &__cytat {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+
+            &-title {
+                margin-top: 15px;
+            }
+        }
+
+        &_text {
+            padding: 15px;
+        }
+    }
+}
+
+@media(min-width:992px) {
+    .main {
+        &__box {
+            margin-top: 50px;
+        }
+
+        &__cytat {
+            margin-bottom: 15px;
+            padding: 25px;
+
+            &-title {
+                margin-top: 25px;
+            }
+        }
+
+        &__text {
+            font-size: 1.5rem;
+            padding: 25px;
+        }
+
+        &__feature {
+            width: 30%;
+
+            i {
+                font-size: 7rem;
+                transition: transform .3s;
+
+                &:hover {
+                    transform: rotate(20deg);
+                }
+            }
+
+            p {
+                text-align: center;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media(min-width:1150px) {
+    .main {
+        &__cytat {
+            padding: 35px;
+        }
+
+        &__text {
+            font-size: 1.8rem;
+            padding: 35px;
+        }
+    }
+}

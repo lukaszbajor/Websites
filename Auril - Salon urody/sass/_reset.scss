@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Cabin Condensed", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+.bg {
+  background-color: #3c9daa;
+}
+.scroll-fix::before {
+  display: block;
+  margin-top: 1px;
+  // height: 1px;
+  content: "";
+}

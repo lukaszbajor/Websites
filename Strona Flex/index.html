@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konkurs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/9bf94860b7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="burger">
+            <div class="burger__wrap">
+                <div class="burger__bars"></div>
+                <div class="burger__bars-close"></div>
+            </div>
+        </div>
+        <p class="header__logo letter-spacing-effect">Lorem transport</p>
+        <div class="header__text-box">
+            <div class="header__heading-box">
+                <h1 class="header__title"></h1><span class="header__cursor">|</span>
+            </div>
+            <p class="header__text">Lorem transport to lider wśród przewoźników. Zachęcamy do
+                skorzystania z bogatej oferty.
+            </p>
+            <a href="#offer"><button class="header__btn glass-effect">Sprawdź</button></a>
+        </div>
+        <div class="skew-block"></div>
+    </header>
+    <nav class="nav">
+        <div class="nav__items">
+            <a href="#aboutus" class="nav__item">O nas</a>
+            <a href="#offer" class="nav__item">Oferta</a>
+            <a href="#diff" class="nav__item">Co nas wyróżnia?</a>
+            <a href="#contact" class="nav__item">Kontakt</a>
+        </div>
+    </nav>
+    <main>
+        <section class="about" id="aboutus">
+            <div class="wrap">
+                <h1 class="about__title main-title letter-spacing-effect">O nas</h1>
+                <p class="about__text">Jesteśmy firmą z tradycjami, działającą prężnie od 1997 roku. Zajmujemy się
+                    przewozami zagranicznymi.Siedziba firmy znajduję się w Rzeszowie przy ulicy Lorema Ipsuma
+                    14. Nasza firma ma wiele do zaoferowania. Sprawdź! Zapewniamy przewóz:
+                </p>
+
+                <div class="about__box">
+                    <div class="about__box-item">
+                        <div class="top">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="bottom">
+                            <p class="about__item-text">Przewozimy ludzi między kilkoma krajami Europy w atrakcyjnych
+                                cenach!</p>
+                        </div>
+                    </div>
+                    <div class="about__box-item">
+                        <div class="bottom">
+                            <p class="about__item-text about__item-text--bottom">Transport zwierząt jak najbardziej
+                                możliwy, za pisemną zgodą weterynarza!</p>
+                        </div>
+                        <div class="top">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                    </div>
+                    <div class="about__box-item">
+                        <div class="top"><i class="fas fa-couch"></i></div>
+                        <div class="bottom">
+                            <p class="about__item-text">Jeśli się przeprowadzasz, i nie ma kto przewieźć Ci mebli,
+                                również zapraszamy!</p>
+                        </div>
+                    </div>
+                    <div class="about__box-item">
+                        <div class="top"><i class="fas fa-motorcycle"></i></div>
+                        <div class="bottom">
+                            <p class="about__item-text">Motory, maszyny, ciężkie przedmioty.. Nie ma dla nas problemu!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="motto">
+            <div class="motto__opacity-effect">
+                <div class="wrap">
+                    <div class="motto__box">
+                        <h1 class="motto__text">Połączenie sił to początek, pozostanie razem to postęp, wspólna praca to
+                            sukces.</h1>
+                        <p class="motto__author">~Henry Ford</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="offer" id="offer">
+            <div class="wrap">
+                <h1 class="offer__title main-title main-title--other-color letter-spacing-effect">Oferta</h1>
+
+                <div class="offer__cards">
+
+                    <div class="offer__card" onclick="void(0)">
+                        <div class="offer__card-img offer__card-img--people">
+                            <h3 class="offer__card-img-title">Przewóz ludzi</h3>
+                            <div class="offer__card-img-info">
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+
+                        <div class="offer__card-info">
+                            <h3 class="offer__card-info-title">Przewóz ludzi</h3>
+                            <ul class="offer__card-info-list">
+                                <li class="offer__card-info-list-item"> <span>Francja</span> <span>300zł</span></li>
+                                <li class="offer__card-info-list-item"><span>Niemcy</span><span>250zł</span></li>
+                                <li class="offer__card-info-list-item"><span>Hiszpania</span><span>350zł</span></li>
+                                <li class="offer__card-info-list-item"><span>Austria</span><span>200zł</span></li>
+                                <li class="offer__card-info-list-item"><span>Holandia</span><span>280zł</span></li>
+                            </ul>
+                            <button class="offer__card-info-btn">
+                                Rezerwacja
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offer__card" onclick="void(0)">
+                        <div class="offer__card-img offer__card-img--animals">
+                            <h3 class="offer__card-img-title">Przewóz zwierząt</h3>
+                            <div class="offer__card-img-info">
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                        <div class="offer__card-info">
+                            <h3 class="offer__card-info-title">Przewóz zwierząt</h3>
+                            <p class="offer__card-info-text">
+                                Wyliczenie kwoty należnej, nastąpi po wcześniejszej konsultacji telefonicznej.
+                            </p>
+                            <button class="offer__card-info-btn">
+                                Rezerwacja
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offer__card" onclick="void(0)">
+                        <div class="offer__card-img offer__card-img--things">
+                            <h3 class="offer__card-img-title">Przewóz rzeczy</h3>
+                            <div class="offer__card-img-info">
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                        <div class="offer__card-info">
+                            <h3 class="offer__card-info-title">Przewóz rzeczy</h3>
+                            <p class="offer__card-info-text">
+                                Wyliczenie kwoty należnej, nastąpi po wcześniejszej konsultacji telefonicznej.
+                                Kwota naliczona zależna jest od kilogramów.
+                            </p>
+                            <button class="offer__card-info-btn">
+                                Rezerwacja
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="skew-block"></div>
+        </section>
+        <section class="diff" id="diff">
+            <div class="wrap">
+                <h1 class="diff__title main-title letter-spacing-effect">Co nas wyróżnia?</h1>
+                <div class="diff__box">
+                    <div class="diff__wrap-img">
+                        <div class="diff__img first-img opa">
+                            <p class="diff__img-opacity-text">Bezpieczeństwo</p>
+                        </div>
+                        <div class="diff__img second-img">
+                            <p class="diff__img-opacity-text opa">Nowoczesność</p>
+                        </div>
+                        <div class="diff__img third-img opa">
+                            <p class="diff__img-opacity-text">Punktualność</p>
+                        </div>
+                        <div class="diff__img fourth-img ">
+                            <p class="diff__img-opacity-text">Kadra</p>
+                        </div>
+                    </div>
+                    <div class="diff__text">
+                        <p class="diff__text-txt">
+                            <strong>Lorem transport</strong> od lat zapewnia bezpieczeństwo podczas podróży naszym
+                            klientom. Dobrze
+                            wyszkolona kadra pracownicza to podstawa. <br><br>
+                            Nasi pracownicy jeżdżą najnowszymi modelami busów marki <strong>LoremAstra</strong> Dbamy
+                            nie tylko o zewnętrzny wygląd pojazdów, ale także o stan techniczny. Przed każdą podróżą
+                            jest to dokładnie badane. <br><br>
+                            <strong>Punktualność</strong> - czas jest na wagę złota. Trzeba pamiętać, że
+                            <strong>bezpieczeństwo</strong> jest
+                            najważniejsze. Nasi pracownicy potrafią połączyć te dwie cechy - dlatego nasza firma jest
+                            ponad inne! <br> <br>
+                            Masa zadowolonych klientów czy to po podróży, czy po podróży swojego pupila, czy podczas
+                            przeprowadzki. <span class="diff__spn"><a href="#contact">Skontaktuj</a></span> się z nami i
+                            przekonaj się sam!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="wrap">
+                <h1 class="contact__title main-title main-title--other-color letter-spacing-effect">Kontakt</h1>
+                <p class="contact__info">Masz pytanie? Pisz do nas widomość, zadzwoń albo odwiedź
+                    nasze social media!</p>
+                <form class="contact__form">
+
+                    <label for="name" class="contact__form-label">Imię i nazwisko:</label>
+                    <input type="text" class="contact__form-input" id="name">
+
+                    <label for="email" class="contact__form-label">Adres e-mail:</label>
+                    <input type="text" class="contact__form-input" id="email">
+
+                    <label for="msg" class="contact__form-label">Wiadomość:</label>
+                    <textarea id="msg" class="contact__form-textarea"></textarea>
+
+                    <button type="submit" class="contact__form-btn">Wyślij</button>
+                </form>
+                <div class="contact__socials">
+                    <div class="contact__social"><i class="fas fa-phone"></i>
+                        <p>721697450</p>
+                    </div>
+                    <div class="contact__social"><i class="fab fa-facebook"></i>
+                        <p>loremtransport</p>
+                    </div>
+                    <div class="contact__social"><i class="fab fa-instagram"></i>
+                        <p>loremtrans</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text"> &copy;<span class="footer__number-year"></span>Lorem transport</p>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/typing.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+.subpage {
+  padding: 30px;
+  color: white;
+  margin-bottom: 50px;
+
+  &__box {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    background-color: $dark-gray;
+    border-radius: 8px;
+  }
+  &__info {
+    font-family: Lato;
+    margin: 30px 0;
+    font-size: 1.6rem;
+    text-align: justify;
+  }
+  &__offers-info-list,
+  &__offers-benefits-list {
+    font-family: Lato;
+  }
+
+  &__offers-info,
+  &__offers-benefits {
+    text-align: center;
+    margin: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    &-list {
+      font-size: 1.6rem;
+      list-style: none;
+      li {
+        padding: 3px;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .subpage {
+    padding: 70px;
+    &__box {
+      padding: 40px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

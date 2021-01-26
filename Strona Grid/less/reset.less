@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Amaranth',
+        sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: @testcolor;
+    color: @secondcolor;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.wrap-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "header header"
+        "section section"
+    ;
+
+}
+
+
+@media(min-width:768px) {
+    .wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .wrap-grid {
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.2fr 1fr;
+    }
+
+    .wrap-flex {
+        width: 20%;
+        padding: 30px;
+    }
+}

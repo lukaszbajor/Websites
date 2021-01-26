@@ -1,0 +1,197 @@
+.nav {
+    position: absolute;
+    top: 0;
+    transform: translateX(100%);
+    z-index: 3;
+    background-color: @navcolor;
+    color: @secondcolor;
+    grid-area: nav;
+    height: 100%;
+    width: 100%;
+    font-size: 2.8rem;
+    transition: transform .3s;
+
+    &__box {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__logo {
+        display: none;
+
+        .logo-text {
+            font-size: 2.8rem;
+        }
+    }
+
+    &__links {
+        margin-top: 150px;
+        margin-bottom: 50px;
+
+        .links-list {
+            list-style: none;
+            text-align: center;
+
+            .link {
+                padding: 10px;
+                font-size: 2rem;
+
+                a {
+                    text-decoration: none;
+                    color: @secondcolor;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &__contact {
+        text-align: center;
+
+        &-title {
+            font-size: 3.2rem;
+            padding-bottom: 5px;
+            border-bottom: 1px solid @myyellow;
+            margin-bottom: 5px;
+        }
+
+        &-item {
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+            padding: 3px;
+
+
+            i {
+                margin-top: 5px;
+                font-size: 1.5rem;
+                color: rgb(219, 243, 3);
+            }
+
+            p {
+                margin-left: 8px;
+
+            }
+        }
+    }
+}
+
+.active {
+    transition: transform .3s;
+    transform: translateX(0);
+    display: flex;
+
+}
+
+@media(min-width:768px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        display: block;
+        padding: 30px;
+        width: 20%;
+        transition: unset;
+        transform: translateX(0);
+
+        &__box {
+
+            justify-content: space-between;
+
+        }
+
+        &__logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 20%;
+            width: 100%;
+            text-align: center;
+            background-color: @secondcolor;
+            padding: 10px;
+            // border-radius: 8px;
+            color: @maincolor;
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__links {
+            .links-list {
+
+                .link {
+                    a {
+                        position: relative;
+                        padding: 10px;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            height: 3px;
+                            width: 100%;
+                            background-color: @myyellow;
+                            transform: scaleX(0);
+                            transform-origin: right;
+                            transition: transform .3s ease-out;
+                        }
+
+                        &:hover::after {
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+@media(min-width:992px) {
+    .nav {
+        &__logo {
+            .logo-text {
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+}
+
+@media(min-width:1200px) {
+    .nav {
+        &__box {
+            height: 100%;
+            width: 100%;
+        }
+
+        &__logo {
+            .logo-text {
+                font-size: 2rem;
+            }
+
+            img {
+                height: 60%;
+                width: 60%;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

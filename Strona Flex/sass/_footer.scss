@@ -1,0 +1,19 @@
+.footer {
+    background-color: $main-color;
+
+    &__text {
+        font-size: 2.5rem;
+        padding: 0.8em;
+        text-align: center;
+        color: $winter-color;
+    }
+}
+
+@media(max-width:576px) {
+    .footer {
+        &__text {
+            font-size: 1.8rem;
+        }
+    }
+
+}

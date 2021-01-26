@@ -1,0 +1,138 @@
+.contact {
+    padding-bottom: 2em;
+
+    &__title {
+        transition: letter-spacing .3s;
+    }
+
+    &__info {
+        text-align: center;
+        margin-bottom: 4em;
+        padding: 0 1em;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+
+        &-label {
+            width: 90%;
+
+        }
+
+        &-input {
+            width: 90%;
+            margin: 2em;
+            padding: 0.5em;
+            border: none;
+            border-bottom: 2px solid $bad-color;
+            outline: none;
+
+            &:focus {
+                border-bottom-color: $btn-color;
+
+            }
+        }
+
+        &-textarea {
+            max-width: 90%;
+            min-width: 90%;
+            width: 90%;
+            min-height: 150px;
+            padding: 0.5em;
+            border: none;
+            border-bottom: 2px solid $bad-color;
+            outline: none;
+
+            &:focus {
+                border-bottom-color: $btn-color;
+
+            }
+        }
+
+        &-btn {
+            @include btnGray;
+
+            &:hover {
+
+                &::before {
+                    left: 130%;
+                }
+
+            }
+
+            &::before {
+                @include glassEffect;
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        height: 100px;
+        margin: 4em auto;
+
+    }
+
+    &__social {
+        position: relative;
+
+        i {
+            font-size: 5rem;
+            transition: color .3s;
+
+            &:hover {
+                color: rgb(61, 60, 60);
+            }
+        }
+
+        p {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 100%);
+        }
+    }
+
+}
+
+@media(max-width:450px) {
+    .contact {
+        &__social {
+
+            margin: 0 2em;
+
+            i {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media(min-width:1100px) {
+    .contact {
+
+        &__form {
+
+            &-label {
+                width: 70%;
+            }
+
+            &-input {
+                width: 70%;
+            }
+
+            &-textarea {
+                max-width: 70%;
+                min-width: 70%;
+                width: 70%;
+            }
+        }
+    }
+}

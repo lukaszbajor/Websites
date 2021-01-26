@@ -1,0 +1,172 @@
+.nav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: $light-light;
+  z-index: 10;
+  box-shadow: 1px 1px 10px;
+  &__list {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+
+    &-item {
+      padding: 5px;
+      font-size: 1.5rem;
+
+      &--none {
+        display: block;
+      }
+
+      &--none-img {
+        display: none;
+      }
+
+      .logo-dsp {
+        display: none;
+      }
+
+      a {
+        padding: 5px;
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+  .socials {
+    display: none;
+  }
+}
+
+@media (min-width: 922px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    bottom: unset;
+    box-shadow: 1px 1px 10px;
+
+    &__list {
+      padding: 7px;
+      justify-content: flex-start;
+
+      &-item {
+        position: relative;
+        padding-left: 10px;
+
+        &--none {
+          display: none;
+        }
+
+        &--none-img {
+          display: block;
+        }
+
+        .logo-dsp {
+          display: block;
+          width: 50px;
+          height: 50px;
+        }
+        a {
+          padding: unset;
+          position: relative;
+          padding-bottom: 7px;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background-color: $main-color;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+    .socials {
+      display: flex;
+      align-self: center;
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: rgb(58, 57, 57);
+        transition: color 0.5s;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          color: $dark-gray;
+        }
+        i {
+          font-size: 30px;
+          margin: 5px;
+        }
+      }
+      .visit {
+        display: inline-block;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-right: 15px;
+        padding: 10px;
+        border: 1px solid $dark-gray;
+        border-radius: 5px;
+        animation: shake 5s linear infinite;
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: rgb(58, 57, 57);
+          color: $light-light;
+        }
+      }
+      @keyframes shake {
+        0% {
+          transform: translateX(0);
+        }
+        90% {
+          transform: translateX(0);
+        }
+        91% {
+          transform: translateX(10px);
+        }
+        92% {
+          transform: translateX(-10px);
+        }
+        93% {
+          transform: translateX(10px);
+        }
+        94% {
+          transform: translateX(-10px);
+        }
+        95% {
+          transform: translateX(10px);
+        }
+        96% {
+          transform: translateX(-10px);
+        }
+        97% {
+          transform: translateX(10px);
+        }
+        98% {
+          transform: translateX(-10px);
+        }
+        99% {
+          transform: translateX(10px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}

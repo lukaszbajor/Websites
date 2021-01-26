@@ -1,0 +1,244 @@
+.diff {
+    min-height: 100vh;
+    background-color: $main-color;
+    padding-bottom: 5em;
+
+    &__title {
+        transition: letter-spacing .3s;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        min-height: 600px;
+        margin-top: 5em;
+        padding-bottom: 1em;
+        background-color: $winter-color;
+    }
+
+    &__wrap-img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 2em;
+    }
+
+    &__img {
+        position: relative;
+        display: block;
+        width: 40%;
+        height: 140px;
+        border-radius: 50%;
+        margin: 0.5em;
+        box-shadow: 15px 15px 20px #2e2e2e2e;
+        background-position: center;
+        background-size: cover;
+        transition: .5s;
+        background-size: 200%;
+        transition: background-size .5s;
+
+        //object fit
+        &-opacity-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $winter-color;
+            font-weight: 700;
+            opacity: 1;
+        }
+    }
+
+    &__text {
+        background-color: $btn-color;
+        min-height: 500px;
+        width: 90%;
+        border-radius: 15px;
+        margin: auto 2em auto 0;
+        box-shadow: 15px 15px 15px 5px #2e2e2e2e;
+        margin: 0 auto;
+        padding-top: 2.5em;
+
+        &-txt {
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 1.5em 0.5em;
+        }
+    }
+
+    .first-img {
+        background-image: $diff-gradient, url("../img/bezp.jpg");
+        transition: .5s;
+    }
+
+    .second-img {
+        background-image: $diff-gradient,
+            url("../img/bus.jpg");
+    }
+
+    .third-img {
+        background-image: $diff-gradient,
+            url("../img/punkt.jpg");
+    }
+
+    .fourth-img {
+        background-image: $diff-gradient,
+            url("../img/zadowolenie.jpg");
+    }
+
+    &__spn {
+
+
+        a {
+            color: $main-color;
+            text-decoration: none;
+        }
+
+    }
+}
+
+@media(min-width:407px) {
+    .diff {
+
+        &__img {
+            height: 180px;
+        }
+
+        &__text {
+            &-txt {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media(min-width:490px) {
+    .diff {
+        &__img {
+            height: 210px;
+        }
+
+        &__spn {
+            position: relative;
+            z-index: 0;
+            transition: all .3s;
+
+            a {
+                text-decoration: none;
+                color: $bad-color;
+                transition: color .3s;
+
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: -5px;
+                height: 3px;
+                width: 110%;
+                background-color: $main-color;
+                z-index: -1;
+                transition: all .3s;
+            }
+
+            &:hover {
+                color: $winter-color;
+
+                a {
+                    color: $winter-color;
+                }
+            }
+
+            &:hover::after {
+                height: 31px;
+            }
+        }
+    }
+}
+
+@media(min-width:576px) {
+    .diff {
+
+        &__img {
+            position: relative;
+            height: 280px;
+
+            &-opacity-text {
+                opacity: 0;
+                transition: opacity .5s;
+            }
+
+            &:hover {
+                background-size: 260%;
+
+                .diff__img-opacity-text {
+                    opacity: 1;
+                }
+
+            }
+        }
+
+        &__text {
+            &-txt {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media(min-width:730px) {
+    .diff {
+
+        &__box {
+            flex-direction: row;
+            border-radius: 15px;
+        }
+
+        &__img {
+            height: 200px;
+            width: 45%;
+        }
+
+        &__text {
+            margin: 1.8em 1em;
+
+            &-txt {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media(min-width:972px) {
+    .diff {
+
+
+        &__img {
+            height: 230px;
+        }
+
+        &__text {
+            &-txt {
+                font-size: 1.9rem;
+            }
+        }
+    }
+}
+
+@media(min-width:1150px) {
+    .diff {
+
+
+        &__img {
+            height: 280px;
+        }
+
+        &__text {
+            &-txt {
+                font-size: 2rem;
+            }
+        }
+    }
+}

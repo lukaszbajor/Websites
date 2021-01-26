@@ -1,0 +1,64 @@
+.motto {
+    background-image: url('../img/motto-mobile.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+
+    &__opacity-effect {
+        min-height: 100vh;
+        background-color: rgba(41, 43, 41, 0.466);
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        color: $winter-color;
+        padding: 0.8em;
+    }
+
+
+    &__author {
+        margin-top: 1.2em;
+    }
+}
+
+@media(min-width:576px) {
+    .motto {
+        background-image: url('../img/motto-desktop.jpg');
+        background-position: center;
+
+        &__text {
+            font-size: 3rem;
+        }
+    }
+
+}
+
+@media(min-width:992px) {
+    .motto {
+        &__text {
+            font-size: 4.2rem;
+        }
+
+        &__author {
+            font-size: 1.8rem;
+        }
+    }
+
+}
+
+@media(min-width:1200px) {
+    .motto {
+        &__text {
+            font-size: 6rem;
+        }
+
+        &__author {
+            font-size: 2.2rem;
+        }
+    }
+
+}

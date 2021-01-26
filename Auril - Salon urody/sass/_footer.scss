@@ -1,0 +1,14 @@
+.footer {
+  padding: 30px;
+  margin-bottom: 68px;
+  font-size: 2rem;
+  text-align: center;
+  background-color: $main-color;
+  color: $white-color;
+}
+
+@media (min-width: 922px) {
+  .footer {
+    margin-bottom: unset;
+  }
+}

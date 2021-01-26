@@ -1,0 +1,34 @@
+.quote {
+  position: relative;
+  height: 60vh;
+  background-image: url("/img/cytat.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: $white-color;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: italic;
+  &__text,
+  &__author {
+    z-index: 2;
+    max-width: 1200px;
+  }
+  &__author {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 567px) {
+  .quote {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 992px) {
+  .quote {
+    font-size: 3rem;
+  }
+}

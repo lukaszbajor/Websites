@@ -1,0 +1,51 @@
+.contact {
+  background-color: rgb(245, 241, 241);
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+  }
+  &__name {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+  }
+  &__item {
+    display: flex;
+    font-size: 1.8rem;
+    padding: 5px;
+    p {
+      margin-left: 3px;
+      text-decoration: underline;
+    }
+    &--link {
+      a {
+        margin-left: 5px;
+        color: black;
+      }
+    }
+  }
+  .social {
+    a {
+      color: black;
+      padding: 8px;
+      i {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .contact {
+    .social {
+      a {
+        transition: color 0.5s;
+        &:hover {
+          color: rgb(58, 57, 57);
+        }
+      }
+    }
+  }
+}

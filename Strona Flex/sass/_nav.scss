@@ -1,0 +1,87 @@
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: $secondary-color;
+    z-index: 100;
+    clip-path: circle(0 at 97% 95%);
+    transition: clip-path .8s;
+
+    &-active {
+        clip-path: circle(200% at 97% 95%);
+    }
+
+
+    &__item {
+        position: relative;
+        display: block;
+        color: white;
+        padding: 1em 2em;
+        font-size: 2.8rem;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+}
+
+@keyframes itemsUp {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.nav-animation {
+    animation: itemsUp .7s both;
+}
+
+@media(min-width:576px) {
+    .nav {
+        &__item {
+            margin: 0.5em 0;
+            padding: 0.5em 2em;
+            font-size: 2.8rem;
+            text-decoration: none;
+            border-top: unset;
+
+            &:hover {
+                color: $bad-color;
+            }
+
+            &::before {
+                @include navEffect;
+                left: 0;
+                transform: scaleY(0);
+                transition: transform .3s;
+            }
+
+            &::after {
+                @include navEffect;
+                right: 0;
+                transform: scaleY(1);
+                transition: width.3s;
+                z-index: -10;
+            }
+
+            &:hover::before {
+                transform: scaleY(1);
+            }
+
+            &:hover::after {
+                width: 100%;
+                transform: scaleY(1);
+
+            }
+
+
+        }
+    }
+}
